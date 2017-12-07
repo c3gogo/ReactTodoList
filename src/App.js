@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import AddTodo from './Components/AddTodo';
-import './App.css';
+import React, { Component } from "react";
+import AddTodo from "./Components/AddTodo";
+import Todos from "./Components/Todos";
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
             <h1 className="display-3">Todo List</h1>
           </div>
           <AddTodo />
+          <Todos />
         </div>
       </div>
     );
