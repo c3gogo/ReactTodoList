@@ -24,16 +24,20 @@ class App extends Component {
 
         {
           id: uuid.v4(),
-          title: "Test my todo list"
+          title: "Test my todo list 1"
         },
-        
+
         {
           id: uuid.v4(),
-          title: "Test my todo list"
+          title: "Test my todo list 2"
         },
 
       ]
     });
+  }
+
+  componentWillMount() {
+    this.getTodos();
   }
 
 
@@ -45,7 +49,8 @@ class App extends Component {
             <h1 className="display-3">Todo List</h1>
           </div>
           <AddTodo />
-          <Todos />
+          <br />
+          <Todos todos={this.state.todos}/>
         </div>
       </div>
     );
