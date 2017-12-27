@@ -40,6 +40,13 @@ class App extends Component {
     this.getTodos();
   }
 
+  handleAddTodo(todo){
+    let todos = this.state.todos;
+    todos.push(todo);
+    this.setState({
+      todos: todos
+    });
+  }
 
   render() {
     return (
@@ -48,7 +55,7 @@ class App extends Component {
           <div className="jumbotron">
             <h1 className="display-3">Todo List</h1>
           </div>
-          <AddTodo />
+          <AddTodo addTodo={this.handleAddTodo.bind(this)}/>
           <br />
           <Todos todos={this.state.todos}/>
         </div>
